@@ -51,3 +51,8 @@ def _add_up_category_spending(monthly_transactions) -> Dict:
 
 def get_category_spending() -> Dict:
     return _add_up_category_spending(get_monthly_transactions())
+
+
+if __name__ == "__name__":
+    # TODO: Add arg-parsing to receive the csv as input
+    pass
