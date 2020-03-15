@@ -164,7 +164,7 @@ CLEAN_MONTHLY_TRANSACTIONS = [{
   'transaction_date': '02/28/2020',
   'clearing': '02/28/2020',
   'description': 'ACH DEPOSIT INTERNET TRANSFER FROM ACCOUNT ENDING IN 4549',
-  'merchant': 'Ach Deposit Internet Transfer From Account Ending In 4549',
+  'merchant': 'Ach Deposit Internet Transfer From Account Ending In',
   'category': 'Payment',
   'type': 'Payment',
   'amount': '-598.33'
@@ -172,7 +172,7 @@ CLEAN_MONTHLY_TRANSACTIONS = [{
   'transaction_date': '02/28/2020',
   'clearing': '02/28/2020',
   'description': 'ACH DEPOSIT INTERNET TRANSFER FROM ACCOUNT ENDING IN 4549',
-  'merchant': 'Ach Deposit Internet Transfer From Account Ending In 4549',
+  'merchant': 'Ach Deposit Internet Transfer From Account Ending In',
   'category': 'Payment',
   'type': 'Payment',
   'amount': '-114.46'
@@ -188,7 +188,7 @@ CLEAN_MONTHLY_TRANSACTIONS = [{
   'transaction_date': '02/27/2020',
   'clearing': '02/27/2020',
   'description': 'ACH DEPOSIT INTERNET TRANSFER FROM ACCOUNT ENDING IN 4549',
-  'merchant': 'Ach Deposit Internet Transfer From Account Ending In 4549',
+  'merchant': 'Ach Deposit Internet Transfer From Account Ending In',
   'category': 'Payment',
   'type': 'Payment',
   'amount': '-711.29'
