@@ -7,7 +7,7 @@ def _remove_column_names_from_data(transactions: List[Dict]) -> List[Dict]:
     return transactions
 
 
-def _open_monthly_transaction_statement() -> List[Dict]:
+def get_monthly_transactions() -> List[Dict]:
     transactions = []
     with open('Apple_Card_Transactions_February_2020.csv') as spending:
         csv_reader = csv.reader(spending)
@@ -29,10 +29,6 @@ def _structure_transaction_information(transaction: List[str]) -> Dict:
     }
 
 
-def _add_up_category_spending(categories: Dict, ) -> None:
-    pass
-
-
 # TODO Update this to be dynamic
 def _set_up_categories() -> Dict:
     return {
@@ -40,15 +36,18 @@ def _set_up_categories() -> Dict:
         "transportation": 0,
         "gas": 0,
         "other": 0,
-        "payments": 0
+        "payment": 0,
+        "grocery": 0
     }
 
 
+def _add_up_category_spending(monthly_transactions) -> Dict:
+    category_spending = _set_up_categories()
+    for transaction in monthly_transactions:
+        category_spending[transaction["category"].lower()] += float(transaction["amount"])
 
-def grab_monthly_transactions() -> List[Dict]:
-    monthly_transactions = _open_monthly_transaction_statement()
-    return monthly_transactions
+    return category_spending
 
 
-if __name__ == "__main__":
-    grab_monthly_transactions()
+def get_category_spending() -> Dict:
+    return _add_up_category_spending(get_monthly_transactions())
