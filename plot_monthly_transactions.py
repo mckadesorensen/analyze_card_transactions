@@ -1,5 +1,3 @@
-import re
-
 from matplotlib import pyplot as plt
 from typing import List, Dict, Tuple
 from pull_monthy_transactions_from_csv import get_category_spending, get_monthly_transactions
@@ -54,21 +52,8 @@ def pie_graph(transactions) -> None:
 
 
 def _shorten_name(merchants: List) -> List:
-    ANNOYING = re.compile(r"(.*)# ([0-9]+)")
-    ANNOYING_2 = re.compile(r'(.*)#([0-9]+)')
-    ANNOYING_3 = re.compile(r"(.*)([0-9]+)")
     new_merchant = []
     for merchant in merchants:
-        m = re.match(ANNOYING, merchant)
-        m_2 = re.match(ANNOYING_2, merchant)
-        m_3 = re.match(ANNOYING_3, merchant)
-        if m:
-            merchant, _ = m.groups()
-        elif m_2:
-            merchant, _ = m_2.groups()
-        elif m_3:
-            merchant, _ = m_3.groups()
-
         if len(merchant) > 15:
             new_merchant.append(merchant[:15])
         else:
