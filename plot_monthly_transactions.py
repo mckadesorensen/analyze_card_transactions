@@ -1,5 +1,6 @@
-from matplotlib import pyplot as plt
 from typing import List, Dict, Tuple
+
+from matplotlib import pyplot as plt
 from pull_monthy_transactions_from_csv import get_category_spending, get_monthly_transactions
 import pandas as pd
 
