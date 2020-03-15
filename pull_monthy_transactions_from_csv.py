@@ -29,6 +29,22 @@ def _structure_transaction_information(transaction: List[str]) -> Dict:
     }
 
 
+def _add_up_category_spending(categories: Dict, ) -> None:
+    pass
+
+
+# TODO Update this to be dynamic
+def _set_up_categories() -> Dict:
+    return {
+        "restaurants": 0,
+        "transportation": 0,
+        "gas": 0,
+        "other": 0,
+        "payments": 0
+    }
+
+
+
 def grab_monthly_transactions() -> List[Dict]:
     monthly_transactions = _open_monthly_transaction_statement()
     return monthly_transactions
